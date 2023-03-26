@@ -6,16 +6,16 @@ function getComputerChoice () {
 
     // make a choice between three options
     if (num == 1) {
-        choice = "Rock";
+        choice = "rock";
     } else if (num == 2) {
-        choice = "Paper";
+        choice = "paper";
     } else {
-        choice = "Scissors";
+        choice = "scissors";
     }
     
     return choice;
 }
 
 // Declare two variables that store choices
-const playerSelection = prompt("Choose your fighter: ", '');
+const playerSelection = prompt("Choose your fighter: ", '').toLowerCase();
 const computerSelection = getComputerChoice();

@@ -15,3 +15,7 @@ function getComputerChoice () {
     
     return choice;
 }
+
+// Declare two variables that store choices
+const playerSelection = prompt("Choose your fighter: ", '');
+const computerSelection = getComputerChoice();

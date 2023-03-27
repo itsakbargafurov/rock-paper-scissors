@@ -51,12 +51,6 @@ function playRound (player, computer) {
     }
 }
 
-function game() {
-    console.log(playRound(playerSelection, computerSelection));
-}
-
 // Declare two variables that store choices
 const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();
-
-game();

@@ -16,11 +16,7 @@ function getComputerChoice () {
     return choice;
 }
 
-function playRound (playerSelection, computerSelection) {
-    // Declare two variables that serve as placeholders
-    let player = playerSelection;
-    let computer = computerSelection;
-
+function playRound (player, computer) {
     // Play the game
     if (player == "rock") {
         if (computer == "paper") {

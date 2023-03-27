@@ -16,6 +16,11 @@ function getComputerChoice () {
     return choice;
 }
 
+function getPlayerChoice () {
+    let option = prompt("choose your fighter: ", '').toLowerCase();
+    return option;
+}
+
 function playRound (player, computer) {
     // Play the game
     if (player == "rock") {
@@ -46,5 +51,5 @@ function playRound (player, computer) {
 }
 
 // Declare two variables that store choices
-const playerSelection = prompt("choose your fighter: ", '').toLowerCase();
+const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();

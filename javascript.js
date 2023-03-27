@@ -16,6 +16,39 @@ function getComputerChoice () {
     return choice;
 }
 
+function playRound (playerSelection, computerSelection) {
+    // Declare two variables that serve as placeholders
+    let player = playerSelection;
+    let computer = computerSelection;
+
+    // Play the game
+    if (player == "rock") {
+        if (computer == "paper") {
+            console.log("you lose! Paper beats Rock.");
+        } else if (computer == "scissors") {
+            console.log("you win! Rock beats Scissors.");
+        } else {
+            console.log("it's a tie! Rock ties Rock.");
+        }
+    } else if (player == "paper") {
+        if (computer == "rock") {
+            console.log("you win! Paper beats Rock.");
+        } else if (computer == "scissors") {
+            console.log("you lose. Scissors beat Paper.");
+        } else {
+            console.log("it's a tie! Paper ties Paper.");
+        }
+    } else {
+        if (computer == "paper") {
+            console.log("you win! Scissors beat Paper.");
+        } else if (computer == "rock") {
+            console.log("you lose! Rock beats Scissors.");
+        } else {
+            console.log("it's a tie. Scissors tie Scissors")
+        }
+    }
+}
+
 // Declare two variables that store choices
-const playerSelection = prompt("Choose your fighter: ", '').toLowerCase();
+const playerSelection = prompt("choose your fighter: ", '').toLowerCase();
 const computerSelection = getComputerChoice();

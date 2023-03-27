@@ -1,10 +1,10 @@
 function getComputerChoice () {
     let choice = "";
 
-    // randomly select a number between 1 and 3
+    // Randomly select a number between 1 and 3
     let num = Math.floor((Math.random() * 3) + 1);
 
-    // make a choice between three options
+    // Make a choice between three options
     if (num == 1) {
         choice = "rock";
     } else if (num == 2) {
@@ -17,6 +17,7 @@ function getComputerChoice () {
 }
 
 function getPlayerChoice () {
+    // Get player's choice
     let option = prompt("choose your fighter: ", '').toLowerCase();
     return option;
 }

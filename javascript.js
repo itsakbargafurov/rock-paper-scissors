@@ -36,7 +36,7 @@ function playRound (player, computer) {
         if (computer == "rock") {
             return "you win! Paper beats Rock.";
         } else if (computer == "scissors") {
-            return "you lose. Scissors beat Paper.";
+            return "you lose! Scissors beat Paper.";
         } else {
             return "it's a tie! Paper ties Paper.";
         }
@@ -52,11 +52,14 @@ function playRound (player, computer) {
 }
 
 function game() {
-    // Declare two variables that store choices
-    let playerSelection = getPlayerChoice();
-    let computerSelection = getComputerChoice();
+    for (i = 0; i < 5; i++) {
+        // Declare two variables that store choices
+        let playerSelection = getPlayerChoice();
+        let computerSelection = getComputerChoice();
 
-    console.log(playRound(playerSelection, computerSelection));
+        // Print the result of the game
+        console.log(playRound(playerSelection, computerSelection));
+    }   
 }
 
 game();

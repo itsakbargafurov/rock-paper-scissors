@@ -52,6 +52,7 @@ function playRound (player, computer) {
 }
 
 function printResult (playScore, compScore) {
+    // Print the final result
     if (playScore > compScore) {
         return `you won! final result --> ${playScore} : ${compScore}`;   
     } else if (compScore > playScore) {

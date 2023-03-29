@@ -52,14 +52,40 @@ function playRound (player, computer) {
 }
 
 function game() {
+    // Declare two variables that store the results
+    let playerScore = 0;
+    let computerScore = 0;
+    
     for (i = 0; i < 5; i++) {
         // Declare two variables that store choices
         let playerSelection = getPlayerChoice();
         let computerSelection = getComputerChoice();
 
-        // Print the result of the game
+        // Print the result of a single round
         console.log(playRound(playerSelection, computerSelection));
-    }   
+
+        // Get a character for if-loop
+        let character = playRound(playerSelection, computerSelection).charAt(4);
+        
+        // Evaluate the winner or loser
+        if (character == "w") {
+            playerScore++;
+        } else if (character == "l") {
+            computerScore++;
+        } else {
+            
+        }
+        
+    }
+
+    // Print final results
+    if (playerScore > computerScore) {
+        console.log(`you won! final result -> ${playerScore} : ${computerScore}`)    
+    } else if (computerScore > playerScore) {
+        console.log(`computer won! final result -> ${computerScore} : ${playerScore}`)
+    } else {
+        console.log(`unbelievable! it's a tie! -> ${computerScore} : ${playerScore}`)
+    }
 }
 
 game();

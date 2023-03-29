@@ -75,16 +75,14 @@ function game() {
         // Print the result of a single round
         console.log(playRound(playerSelection, computerSelection));
 
-        // Get a character for if-loop
-        let character = playRound(playerSelection, computerSelection).charAt(4);
+        // Get a string for if-loop
+        let string = playRound(playerSelection, computerSelection).slice(0, 8);
         
         // Evaluate the winner or loser
-        if (character == "w") {
+        if (string == "you win!") {
             playerScore++;
-        } else if (character == "l") {
+        } else if (string == "you lose") {
             computerScore++;
-        } else {
-            
         }
         
     }

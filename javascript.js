@@ -73,6 +73,7 @@ function game() {
         let computerSelection = getComputerChoice();
 
         // Print the result of a single round
+        console.log(`round ${i + 1}`);
         console.log(playRound(playerSelection, computerSelection));
 
         // Get a string for if-loop

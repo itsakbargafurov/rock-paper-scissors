@@ -51,6 +51,16 @@ function playRound (player, computer) {
     }
 }
 
+function printResult (playScore, compScore) {
+    if (playScore > compScore) {
+        return `you won! final result --> ${playScore} : ${compScore}`;   
+    } else if (compScore > playScore) {
+        return `computer won! final result --> ${playScore} : ${compScore}`;
+    } else {
+        return `unbelievable! it's a tie! --> ${playScore} : ${compScore}`;
+    }
+}
+
 function game() {
     // Declare two variables that store the results
     let playerScore = 0;
@@ -79,13 +89,7 @@ function game() {
     }
 
     // Print final results
-    if (playerScore > computerScore) {
-        console.log(`you won! final result -> ${playerScore} : ${computerScore}`)    
-    } else if (computerScore > playerScore) {
-        console.log(`computer won! final result -> ${computerScore} : ${playerScore}`)
-    } else {
-        console.log(`unbelievable! it's a tie! -> ${computerScore} : ${playerScore}`)
-    }
+    console.log(printResult(playerScore, computerScore));
 }
 
 game();

@@ -1,4 +1,4 @@
-function getComputerChoice () {
+/* function getComputerChoice () {
     let choice = "";
 
     // Randomly select a number between 1 and 3
@@ -92,4 +92,5 @@ function game() {
     console.log(printResult(playerScore, computerScore));
 }
 
-game();
+game(); */
+

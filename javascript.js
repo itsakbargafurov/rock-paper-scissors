@@ -104,11 +104,14 @@ let computerSelection = getComputerChoice();
 const para1 = document.querySelector("#player-choice");
 const para2 = document.querySelector("#computer-choice");
 
+// select scoreboard elements
+const head3 = document.querySelector('#score-info');
+
 // select rock button
 const rock = document.querySelector("#rock");
 
 rock.addEventListener("click", () => {
-   console.log(playRound("rock", computerSelection)); 
+   head3.textContent = playRound("rock", computerSelection);
    para1.textContent = "🪨";
    displayComputer(para2, computerSelection);
 });
@@ -117,7 +120,7 @@ rock.addEventListener("click", () => {
 const paper = document.querySelector("#paper");
 
 paper.addEventListener("click", () => {
-    console.log(playRound("paper", computerSelection));
+    head3.textContent = playRound("paper", computerSelection);
     para1.textContent = "📜";
     displayComputer(para2, computerSelection);
 });
@@ -126,7 +129,7 @@ paper.addEventListener("click", () => {
 const scissors = document.querySelector("#scissors");
 
 scissors.addEventListener("click", () => {
-    console.log(playRound("scissors", computerSelection));
+    head3.textContent = playRound("scissors", computerSelection);
     para1.textContent = "✂️";
     displayComputer(para2, computerSelection);
 });

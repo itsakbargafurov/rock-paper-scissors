@@ -98,14 +98,34 @@ function displayComputer (para, computer) {
     }
 }
 
+function determineWinner (player, score1, score2) {
+    // Get a string for if-loop
+    let string = playRound(player, computerSelection).slice(0, 8);
+    
+    // Evaluate the winner or loser
+    if (string == "you win!") {
+        return playerScore++;
+    } else if (string == "you lose") {
+        return computerScore++;
+    }
+}
+
 let computerSelection = getComputerChoice();
+
+// Declare two variables that store the results
+let playerScore = 0;
+let computerScore = 0;
 
 // select paragraphs with player and computer choices
 const para1 = document.querySelector("#player-choice");
 const para2 = document.querySelector("#computer-choice");
 
 // select scoreboard elements
-const head3 = document.querySelector('#score-info');
+const head3 = document.querySelector("#score-info");
+
+// select score elements
+const para3 = document.querySelector("#player-score");
+const para4 = document.querySelector("#computer-score");
 
 // select rock button
 const rock = document.querySelector("#rock");
@@ -114,6 +134,9 @@ rock.addEventListener("click", () => {
    head3.textContent = playRound("rock", computerSelection);
    para1.textContent = "🪨";
    displayComputer(para2, computerSelection);
+   determineWinner("rock", playerScore, computerScore);
+   para3.textContent = `player: ${playerScore}`
+   para4.textContent = `computer: ${computerScore}`;
 });
 
 // select paper button

@@ -1,57 +1,4 @@
-/* function getComputerChoice () {
-    let choice = "";
-
-    // Randomly select a number between 1 and 3
-    let num = Math.floor((Math.random() * 3) + 1);
-
-    // Make a choice between three options
-    if (num == 1) {
-        choice = "rock";
-    } else if (num == 2) {
-        choice = "paper";
-    } else {
-        choice = "scissors";
-    }
-    
-    return choice;
-}
-
-function getPlayerChoice () {
-    // Get player's choice
-    let option = prompt("choose your fighter: ", '').toLowerCase();
-    return option;
-}
-
-function playRound (player, computer) {
-    // Play the game
-    if (player == "rock") {
-        if (computer == "paper") {
-            return "you lose! Paper beats Rock.";
-        } else if (computer == "scissors") {
-            return "you win! Rock beats Scissors.";
-        } else {
-            return "it's a tie! Rock ties Rock.";
-        }
-    } else if (player == "paper") {
-        if (computer == "rock") {
-            return "you win! Paper beats Rock.";
-        } else if (computer == "scissors") {
-            return "you lose! Scissors beat Paper.";
-        } else {
-            return "it's a tie! Paper ties Paper.";
-        }
-    } else {
-        if (computer == "paper") {
-            return "you win! Scissors beat Paper.";
-        } else if (computer == "rock") {
-            return "you lose! Rock beats Scissors.";
-        } else {
-            return "it's a tie. Scissors tie Scissors";
-        }
-    }
-}
-
-function printResult (playScore, compScore) {
+/* function printResult (playScore, compScore) {
     // Print the final result
     if (playScore > compScore) {
         return `you won! final result --> ${playScore} : ${compScore}`;   
@@ -141,6 +88,16 @@ function playRound (player, computer) {
     }
 }
 
+function displayComputer (para, computer) {
+    if (computer == "rock") {
+        para.textContent = "🪨";
+    } else if (computer == "paper") {
+        para.textContent = "📜";
+    } else if (computer == "scissors") {
+        para.textContent = "✂️";
+    }
+}
+
 let computerSelection = getComputerChoice();
 
 // select paragraphs with player and computer choices
@@ -153,13 +110,7 @@ const rock = document.querySelector("#rock");
 rock.addEventListener("click", () => {
    console.log(playRound("rock", computerSelection)); 
    para1.textContent = "🪨";
-   if (computerSelection == "rock") {
-    para2.textContent = "🪨";
-   } else if (computerSelection == "paper") {
-    para2.textContent = "📜";
-   } else if (computerSelection == "scissors") {
-    para2.textContent = "✂️";
-   }
+   displayComputer(para2, computerSelection);
 });
 
 // select paper button
@@ -168,13 +119,7 @@ const paper = document.querySelector("#paper");
 paper.addEventListener("click", () => {
     console.log(playRound("paper", computerSelection));
     para1.textContent = "📜";
-    if (computerSelection == "rock") {
-    para2.textContent = "🪨";
-    } else if (computerSelection == "paper") {
-    para2.textContent = "📜";
-    } else if (computerSelection == "scissors") {
-    para2.textContent = "✂️";
-    }
+    displayComputer(para2, computerSelection);
 });
 
 // select scissors button
@@ -183,13 +128,7 @@ const scissors = document.querySelector("#scissors");
 scissors.addEventListener("click", () => {
     console.log(playRound("scissors", computerSelection));
     para1.textContent = "✂️";
-    if (computerSelection == "rock") {
-    para2.textContent = "🪨";
-    } else if (computerSelection == "paper") {
-    para2.textContent = "📜";
-    } else if (computerSelection == "scissors") {
-    para2.textContent = "✂️";
-    }
+    displayComputer(para2, computerSelection);
 });
 
 

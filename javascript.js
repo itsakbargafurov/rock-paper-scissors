@@ -154,4 +154,10 @@ const paper = document.querySelector("#paper");
 
 paper.addEventListener("click", () => {
     console.log(playRound("paper", computerSelection));
-})
+});
+
+const scissors = document.querySelector("#scissors");
+
+scissors.addEventListener("click", () => {
+    console.log(playRound("scissors", computerSelection));
+});

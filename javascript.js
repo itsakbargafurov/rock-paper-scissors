@@ -142,22 +142,54 @@ function playRound (player, computer) {
 }
 
 let computerSelection = getComputerChoice();
-console.log(computerSelection);
 
+// select paragraphs with player and computer choices
+const para1 = document.querySelector("#player-choice");
+const para2 = document.querySelector("#computer-choice");
+
+// select rock button
 const rock = document.querySelector("#rock");
 
 rock.addEventListener("click", () => {
    console.log(playRound("rock", computerSelection)); 
+   para1.textContent = "🪨";
+   if (computerSelection == "rock") {
+    para2.textContent = "🪨";
+   } else if (computerSelection == "paper") {
+    para2.textContent = "📜";
+   } else if (computerSelection == "scissors") {
+    para2.textContent = "✂️";
+   }
 });
 
+// select paper button
 const paper = document.querySelector("#paper");
 
 paper.addEventListener("click", () => {
     console.log(playRound("paper", computerSelection));
+    para1.textContent = "📜";
+    if (computerSelection == "rock") {
+    para2.textContent = "🪨";
+    } else if (computerSelection == "paper") {
+    para2.textContent = "📜";
+    } else if (computerSelection == "scissors") {
+    para2.textContent = "✂️";
+    }
 });
 
+// select scissors button
 const scissors = document.querySelector("#scissors");
 
 scissors.addEventListener("click", () => {
     console.log(playRound("scissors", computerSelection));
+    para1.textContent = "✂️";
+    if (computerSelection == "rock") {
+    para2.textContent = "🪨";
+    } else if (computerSelection == "paper") {
+    para2.textContent = "📜";
+    } else if (computerSelection == "scissors") {
+    para2.textContent = "✂️";
+    }
 });
+
+

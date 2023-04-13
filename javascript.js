@@ -98,18 +98,6 @@ function displayComputer (para, computer) {
     }
 }
 
-function determineWinner (player, score1, score2) {
-    // Get a string for if-loop
-    let string = playRound(player, computerSelection).slice(0, 8);
-    
-    // Evaluate the winner or loser
-    if (string == "you win!") {
-        return playerScore++;
-    } else if (string == "you lose") {
-        return computerScore++;
-    }
-}
-
 let computerSelection = getComputerChoice();
 
 // Declare two variables that store the results
@@ -134,9 +122,6 @@ rock.addEventListener("click", () => {
    head3.textContent = playRound("rock", computerSelection);
    para1.textContent = "🪨";
    displayComputer(para2, computerSelection);
-   determineWinner("rock", playerScore, computerScore);
-   para3.textContent = `player: ${playerScore}`
-   para4.textContent = `computer: ${computerScore}`;
 });
 
 // select paper button

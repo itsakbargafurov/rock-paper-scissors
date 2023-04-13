@@ -146,6 +146,12 @@ console.log(computerSelection);
 
 const rock = document.querySelector("#rock");
 
-rock.addEventListener("click", () =>{
+rock.addEventListener("click", () => {
    console.log(playRound("rock", computerSelection)); 
 });
+
+const paper = document.querySelector("#paper");
+
+paper.addEventListener("click", () => {
+    console.log(playRound("paper", computerSelection));
+})

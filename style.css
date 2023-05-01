@@ -10,3 +10,12 @@ header > h1 {
     font-size: 48px;
     margin: 20px;
 }
+
+button {
+    background-color: #fffffe;
+    width: 160px;
+    height: 160px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 72px;
+}

@@ -1,8 +1,10 @@
 body {
     color: #fffffe;
     background-color: #16161a;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
     color: #7f5af0;
+    font-size: 24px;
 }

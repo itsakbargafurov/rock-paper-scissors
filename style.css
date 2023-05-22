@@ -1,5 +1,5 @@
 body {
-    color: #fffffe;
+    color: #ddd;
     background-color: #232830;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -30,4 +30,17 @@ nav, #player, #computer {
 
 footer {
     margin: auto;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+button {
+    height: 160px;
+    width: 160px;
+    border-radius: 10px;
+    border-style: none;
 }

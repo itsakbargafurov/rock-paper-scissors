@@ -110,6 +110,7 @@ const para2 = document.querySelector("#computer-choice");
 
 // select scoreboard elements
 const head3 = document.querySelector("#score-info");
+const para5 = document.querySelector("#score-message");
 
 // select score elements
 const para3 = document.querySelector("#player-score");
@@ -121,6 +122,7 @@ const rock = document.querySelector("#rock");
 rock.addEventListener("click", () => {
    head3.textContent = playRound("rock", computerSelection);
    para1.textContent = "🪨";
+   para5.remove();
    displayComputer(para2, computerSelection);
 });
 
@@ -130,6 +132,7 @@ const paper = document.querySelector("#paper");
 paper.addEventListener("click", () => {
     head3.textContent = playRound("paper", computerSelection);
     para1.textContent = "📜";
+    para5.remove();
     displayComputer(para2, computerSelection);
 });
 
@@ -139,6 +142,7 @@ const scissors = document.querySelector("#scissors");
 scissors.addEventListener("click", () => {
     head3.textContent = playRound("scissors", computerSelection);
     para1.textContent = "✂️";
+    para5.remove();
     displayComputer(para2, computerSelection);
 });
 

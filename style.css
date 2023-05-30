@@ -66,5 +66,10 @@ button:hover {
 }
 
 section {
-    margin: 12px 0;
+    margin: 20px 0;
+}
+
+#score-message {
+    font-size: 18px;
+    margin: 0 0 24px;
 }

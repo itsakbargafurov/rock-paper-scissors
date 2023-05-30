@@ -64,3 +64,7 @@ button:hover {
 #github:hover {
     color: #7f5af0;
 }
+
+section {
+    margin: 12px 0;
+}

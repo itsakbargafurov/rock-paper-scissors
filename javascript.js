@@ -110,9 +110,12 @@ function determineWinner (player, str) {
 
 let computerSelection = getComputerChoice();
 
-// Declare two variables that store the results
 let playerScore = 0;
 let computerScore = 0;
+
+// select paragraphs with player and computer scores
+const pScore = document.querySelector("#player-score");
+const cScore = document.querySelector("#computer-score");
 
 // select paragraphs with player and computer choices
 const para1 = document.querySelector("#player-choice");
@@ -142,7 +145,7 @@ const paper = document.querySelector("#paper");
 paper.addEventListener("click", () => {
     head3.textContent = playRound("paper", computerSelection);
     para1.textContent = "📜";
-    para5.textContent = determineWinner("paper", head3.textContent);;
+    para5.textContent = determineWinner("paper", head3.textContent);
     displayComputer(para2, computerSelection);
 });
 

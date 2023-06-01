@@ -98,6 +98,16 @@ function displayComputer (para, computer) {
     }
 }
 
+function determineWinner (player, str) {
+    if (str == "you win!") {
+        return `${player} beats ${computerSelection}`
+    } else if (str == "you lose!") {
+        return `${computerSelection} beats ${player}`
+    } else {
+        return `${player} ties with ${computerSelection}`
+    }
+}
+
 let computerSelection = getComputerChoice();
 
 // Declare two variables that store the results
@@ -122,7 +132,7 @@ const rock = document.querySelector("#rock");
 rock.addEventListener("click", () => {
    head3.textContent = playRound("rock", computerSelection);
    para1.textContent = "🪨";
-   para5.remove();
+   para5.textContent = determineWinner("rock", head3.textContent);
    displayComputer(para2, computerSelection);
 });
 
@@ -132,7 +142,7 @@ const paper = document.querySelector("#paper");
 paper.addEventListener("click", () => {
     head3.textContent = playRound("paper", computerSelection);
     para1.textContent = "📜";
-    para5.remove();
+    para5.textContent = determineWinner("paper", head3.textContent);;
     displayComputer(para2, computerSelection);
 });
 
@@ -142,7 +152,7 @@ const scissors = document.querySelector("#scissors");
 scissors.addEventListener("click", () => {
     head3.textContent = playRound("scissors", computerSelection);
     para1.textContent = "✂️";
-    para5.remove();
+    para5.textContent = determineWinner("scissors", head3.textContent);
     displayComputer(para2, computerSelection);
 });
 

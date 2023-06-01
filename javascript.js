@@ -7,9 +7,9 @@
     } else {
         return `unbelievable! it's a tie! --> ${playScore} : ${compScore}`;
     }
-}
+} */
 
-function game() {
+/* function game() {
     // Declare two variables that store the results
     let playerScore = 0;
     let computerScore = 0;
@@ -63,27 +63,27 @@ function playRound (player, computer) {
     // Play the game
     if (player == "rock") {
         if (computer == "paper") {
-            return "you lose! Paper beats Rock.";
+            return "you lose!";
         } else if (computer == "scissors") {
-            return "you win! Rock beats Scissors.";
+            return "you win!";
         } else {
-            return "it's a tie! Rock ties Rock.";
+            return "it's a tie!";
         }
     } else if (player == "paper") {
         if (computer == "rock") {
-            return "you win! Paper beats Rock.";
+            return "you win!";
         } else if (computer == "scissors") {
-            return "you lose! Scissors beat Paper.";
+            return "you lose!";
         } else {
-            return "it's a tie! Paper ties Paper.";
+            return "it's a tie!";
         }
     } else {
         if (computer == "paper") {
-            return "you win! Scissors beat Paper.";
+            return "you win!";
         } else if (computer == "rock") {
-            return "you lose! Rock beats Scissors.";
+            return "you lose!";
         } else {
-            return "it's a tie. Scissors tie Scissors";
+            return "it's a tie!";
         }
     }
 }
